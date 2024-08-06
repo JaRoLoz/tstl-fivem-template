@@ -1,4 +1,5 @@
 {
+    "$schema": "https://raw.githubusercontent.com/JaRoLoz/jade/master/jade.schema.json",
     "js_build": [
         {
             "name": "setup-symlink",
