@@ -1,0 +1,50 @@
+{
+    "js_build": [
+        {
+            "name": "setup-symlink",
+            "folder": ".",
+            "package_manager": "bun",
+            "build_script": "setup"
+        },
+        {
+            "name": "build-client",
+            "folder": ".",
+            "package_manager": "bun",
+            "build_script": "build:client"
+        },
+        {
+            "name": "build-server",
+            "folder": ".",
+            "package_manager": "bun",
+            "build_script": "build:server"
+        }
+    ],
+    "bundle": [
+        {
+            "name": "bundle-client",
+            "output": "./build/client_bundle.lua",
+            "source_dir": "./build/client",
+            "entrypoint": "./build/client/index.lua"
+        },
+        {
+            "name": "bundle-server",
+            "output": "./build/server_bundle.lua",
+            "source_dir": "./build/server",
+            "entrypoint": "./build/server/index.lua"
+        }
+    ],
+    "manifest": {
+        "fx_version": "cerulean",
+        "game": "gta5",
+        "author": "Zurky",
+        "description": "TSTL template integrating jade",
+        "version": "1.0.0",
+        "client_scripts": [
+            "build/client_bundle.lua"
+        ],
+        "server_scripts": [
+            "build/server_bundle.lua"
+        ],
+        "lua54": true
+    }
+}
